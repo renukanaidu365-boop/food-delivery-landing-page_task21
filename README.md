@@ -1,51 +1,52 @@
-# OmniFood Landing Page
+# Project Hero Landing Page
 
-Task 21 for MERN Stack - Responsive Food Delivery Website
+## What I Built
+- Sticky navigation bar
+- Hero section with title, text, and buttons
+- Dashboard preview with 2 floating cards (absolute positioning)
+- Fixed chat widget (bottom-right corner)
+- Mobile hamburger menu
 
-## What is this?
+## My 3 Breakpoints
 
-A food delivery landing page I built for my frontend assignment. It's a single page website for a brand called OmniFood - basically a healthy meal delivery service. The design is based on screenshots my mentor shared.
+| Screen Size | What Changes |
+|-------------|--------------|
+| **600px** | Hamburger menu changes to horizontal nav |
+| **834px** | Switches from stacked to two-column layout |
+| **1024px** | Larger text, more spacing, bigger cards |
 
-## What's inside?
+I used mobile-first design. Base styles are for phones, then I add styles for larger screens.
 
-- **Header** - Logo on left, nav links on right (Food Delivery, How It Works, Our Cities, Sign-up)
-- **Hero section** - "Goodbye Junk Food, Hello Super Healthy Food" with two buttons
-- **How it works** - Phone image on left, 3 steps on right, plus Google Play and App Store buttons
-- **Our Cities** - 4 city cards showing where they deliver
-- **Testimonials** - 3 customer reviews with avatars on a background image
-- **Pricing** - Three plans: Premium ($399/month), Pro ($199/month), Starter ($19/meal)
-- **Footer** - Just copyright and some links
+## Positioning I Used
 
-## How to run this thing
+| Position | Where I Used It | Why |
+|----------|----------------|-----|
+| **sticky** | Navigation bar | Stays at top when scrolling |
+| **relative** | Dashboard container | Lets absolute cards position inside it |
+| **absolute** | Floating cards | Places them outside the main dashboard |
+| **fixed** | Chat widget | Always stays in bottom-right corner |
 
-Super simple:
+## Problems I Faced
 
-1. Download the `index.html` file
-2. Double click it - it opens in your browser
-3. That's it. No server needed, no dependencies to install
+1. **Absolute cards went to top of page**
+   - Forgot `position: relative` on parent container
+   - Fixed by adding it to `.hero-visual`
 
-Or if you're using VS Code, right click the file and pick "Open with Live Server" - works either way.
+2. **Mobile menu didn't work**
+   - Typo in JavaScript ID name
+   - Fixed by matching the ID in HTML
 
----
+3. **Cards covered dashboard on small screens**
+   - Cards were too big
+   - Fixed by making them smaller and adjusting position values
 
-## Responsive stuff
+## What I Learned
 
-I made it work on three screen sizes:
+- `absolute` needs a `relative` parent or it floats to the page top
+- Mobile-first means starting simple and adding complexity
+- Media queries let me adjust position values for different screen sizes
+- CSS is very literal - check for typos first when something breaks
 
-Also made sure:
-- No sideways scrolling (hate when that happens)
-- Images shrink properly without breaking
-- Text is still readable on small screens
-- Buttons don't get too tiny
+## Final Thoughts
 
-
-
-## Tech I used
-
-- HTML5
-- CSS3 (flexbox, grid, media queries)
-- A tiny bit of JavaScript - only for the hamburger menu toggle, nothing fancy
-
-No frameworks, no Bootstrap, no Tailwind. Just plain CSS.
-
-
+I wrote every line myself. I made mistakes and fixed them. Now I understand how positioning and responsive design actually work.

@@ -1,26 +1,23 @@
-// Mobile hamburger menu toggle
-const hamburger = document.getElementById('hamburgerBtn');
+// Step 1: Get the button and menu elements from the page
+const menuButton = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
-if (hamburger && navLinks) {
-  // Toggle menu when clicking hamburger
-  hamburger.addEventListener('click', function(e) {
-    e.stopPropagation();
-    navLinks.classList.toggle('active');
-  });
-
-  // Close menu when clicking any nav link
-  const links = navLinks.querySelectorAll('a');
-  links.forEach(link => {
-    link.addEventListener('click', function() {
-      navLinks.classList.remove('active');
+// Step 2: Check if both elements exist (defensive but simple)
+if (menuButton && navLinks) {
+    
+    // Step 3: Add a click listener to the button
+    menuButton.addEventListener('click', function() {
+        
+        // Step 4: Toggle the 'show' class
+        navLinks.classList.toggle('show');
+        
+        // This is a small UX improvement I added
+        if (navLinks.classList.contains('show')) {
+            menuButton.textContent = '✕';  // Change to 'X' when open
+        } else {
+            menuButton.textContent = '☰';  // Change back to hamburger
+        }
     });
-  });
-
-  // Close menu when clicking outside (optional but nice)
-  document.addEventListener('click', function(e) {
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-      navLinks.classList.remove('active');
-    }
-  });
 }
+
+/

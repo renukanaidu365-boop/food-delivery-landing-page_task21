@@ -3,143 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | AI-Powered Workspace</title>
+    <title>OmniFood - Healthy Food Delivery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- STICKY NAVIGATION BAR -->
-    <!-- I used position: sticky in CSS to keep this at the top when scrolling -->
+    <!-- STEP 1: STICKY NAVIGATION BAR -->
     <header class="sticky-nav">
         <div class="logo">
-            <span>🔗</span> Project
+            <span>🍲</span> OmniFood
         </div>
         
-        <!-- Hamburger button - only shows on mobile -->
+        <!-- Mobile menu button (hamburger) -->
         <button class="mobile-menu-btn" id="menuBtn">☰</button>
         
         <!-- Navigation links -->
         <nav class="nav-links" id="navLinks">
             <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Log in</a></li>
-                <li><a href="#" class="nav-cta">Get AI free</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#cities">Cities</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#" class="signup-btn">Sign up</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- MAIN HERO SECTION -->
-    <main>
-        <!-- Hero content container -->
-        <div class="hero-container">
-            
-            <!-- LEFT SIDE: Text and buttons -->
+    <!-- STEP 2: HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
             <div class="hero-text">
-                <h1>
-                    Write, plan, share.<br>
-                    <span class="gradient-text">With AI at your side.</span>
-                </h1>
-                
-                <p class="hero-description">
-                    It is the connected workspace where better, faster work happens. Now with AI.
-                </p>
-                
+                <h1>A healthy meal<br>delivered to your door,<br>every single day</h1>
+                <p>The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Get AI free</a>
-                    <a href="#" class="btn btn-secondary">Request a demo</a>
-                </div>
-                
-                <div class="hero-tag">
-                    <span class="dot"></span>
-                    To make connections today.
+                    <a href="#" class="btn btn-primary">Start eating well</a>
+                    <a href="#" class="btn btn-outline">Learn more →</a>
                 </div>
             </div>
-            
-            <!-- RIGHT SIDE: Dashboard preview with floating cards -->
-            <!-- I used position: relative here so absolute cards stay inside -->
-            <div class="hero-visual">
-                
-                <!-- Main dashboard preview card -->
-                <div class="dashboard-preview">
-                    <div class="dashboard-header">
-                        <div class="window-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <span class="dashboard-title">Project Dashboard</span>
-                    </div>
-                    
-                    <div class="dashboard-content">
-                        <div class="task-item">
-                            <div class="task-icon">📄</div>
-                            <div class="task-info">
-                                <p class="task-title">Product roadmap</p>
-                                <p class="task-time">Updated 2h ago</p>
-                            </div>
-                            <span class="task-badge">AI summary</span>
-                        </div>
-                        
-                        <div class="task-item">
-                            <div class="task-icon">✍️</div>
-                            <div class="task-info">
-                                <p class="task-title">Q2 content plan</p>
-                                <p class="task-time">Collaborative doc</p>
-                            </div>
-                            <span class="task-badge blue">AI draft</span>
-                        </div>
-                        
-                        <div class="task-item ai-highlight">
-                            <div class="task-icon">🤖</div>
-                            <div class="task-info">
-                                <p class="task-title">AI suggestions active</p>
-                                <p class="task-time">Write, plan, share</p>
-                            </div>
-                            <button class="enable-btn">Enable</button>
-                        </div>
-                    </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/500x450/FFE6D5/e67e22?text=Healthy+Meal" alt="Healthy food plate">
+                <!-- ABSOLUTE positioned floating card -->
+                <div class="floating-badge">
+                    ⭐ 500+ happy customers
                 </div>
-                
-                <!-- FLOATING CARD 1: Team Activity -->
-                <!-- Position: absolute - placed relative to hero-visual container -->
-                <div class="floating-card card-team">
-                    <div class="card-header">
-                        <span>👥</span>
-                        <span class="card-title">Team Activity</span>
-                    </div>
-                    <div class="card-activities">
-                        <div class="activity">Alex added task <span>2m ago</span></div>
-                        <div class="activity">Maya commented <span>15m ago</span></div>
-                        <div class="activity highlight">+3 AI updates <span>now</span></div>
-                    </div>
-                    <button class="card-btn">Create a project →</button>
-                </div>
-                
-                <!-- FLOATING CARD 2: Quick Start -->
-                <div class="floating-card card-quick">
-                    <div class="card-header">
-                        <span>✨</span>
-                        <span class="card-title">Quick start</span>
-                    </div>
-                    <p class="card-text">Get started with AI templates</p>
-                    <button class="card-btn primary">+ Create a project</button>
-                </div>
-                
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- FIXED CHAT WIDGET -->
-    <!-- Position: fixed - always stays in bottom-right corner -->
+    <!-- STEP 3: HOW IT WORKS SECTION (4 steps) -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How it works — <span>simple as 1,2,3</span></h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Tell us your preferences</h3>
+                    <p>Choose your favorite meals, allergies, and dietary goals.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Approve your weekly plan</h3>
+                    <p>Our chefs create a delicious weekly menu just for you.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Receive meals at your door</h3>
+                    <p>Freshly cooked, eco-packaged, delivered daily before noon.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">🎯</div>
+                    <h3>Enjoy & stay healthy</h3>
+                    <p>More energy, less waste. Adjust or pause anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 4: CITIES SECTION (grid with images) -->
+    <section id="cities" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Our <span>cities</span> 🌍</h2>
+            <div class="cities-grid">
+                <div class="city-card">
+                    <img src="https://placehold.co/400x250/FFDAB9/e67e22?text=Lisbon" alt="Lisbon">
+                    <div class="city-info">
+                        <h3>Lisbon, Portugal</h3>
+                        <p>🍽️ 160+ happy customers</p>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <img src="https://placehold.co/400x250/FFDAB9/e67e22?text=San+Francisco" alt="San Francisco">
+                    <div class="city-info">
+                        <h3>San Francisco, USA</h3>
+                        <p>🍽️ 370+ happy customers</p>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <img src="https://placehold.co/400x250/FFDAB9/e67e22?text=Berlin" alt="Berlin">
+                    <div class="city-info">
+                        <h3>Berlin, Germany</h3>
+                        <p>🍽️ 230+ happy customers</p>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <img src="https://placehold.co/400x250/FFDAB9/e67e22?text=London" alt="London">
+                    <div class="city-info">
+                        <h3>London, UK</h3>
+                        <p>🍽️ 420+ happy customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 5: TESTIMONIALS SECTION -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Real <span>stories</span> from customers</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Inexpensive, healthy and great-tasting meals, delivered right to my home. I have lunch with my colleagues now!"</p>
+                    <div class="author">— Sofia Rodriguez (Lisbon)</div>
+                </div>
+                <div class="testimonial">
+                    <p>"The meal planner is spot-on. I've lost 8kg without stress. OmniFood changed my life."</p>
+                    <div class="author">— John Mayer (Berlin)</div>
+                </div>
+                <div class="testimonial">
+                    <p>"No cooking, no cleaning, just delicious whole foods. My family loves the variety."</p>
+                    <div class="author">— Priya Kapoor (London)</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Best decision ever. Super flexible subscription and the app is so easy to use."</p>
+                    <div class="author">— David Chen (San Francisco)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 6: PRICING SECTION -->
+    <section id="pricing" class="bg-warm">
+        <div class="container">
+            <h2 class="section-title">Start eating <span>well today</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$399 <span>/month</span></div>
+                    <ul>
+                        <li>✅ 1 meal per day</li>
+                        <li>✅ Order between 10am–6pm</li>
+                        <li>✅ Free delivery</li>
+                        <li>❌ Priority support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Start starter</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Complete 🥇</h3>
+                    <div class="price">$649 <span>/month</span></div>
+                    <ul>
+                        <li>✅ 2 meals per day</li>
+                        <li>✅ 24/7 priority support</li>
+                        <li>✅ Free delivery + snacks</li>
+                        <li>✅ Personalized recipes</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get complete</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Family Plan</h3>
+                    <div class="price">$899 <span>/month</span></div>
+                    <ul>
+                        <li>✅ Up to 4 family members</li>
+                        <li>✅ 3 meals/day each</li>
+                        <li>✅ Free delivery & dessert</li>
+                        <li>✅ Nutritionist support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Choose family</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 7: FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <h3>🍲 OmniFood</h3>
+                <p>Healthy, delicious, sustainable.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">iOS App</a>
+                <a href="#">Android App</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="footer-contact">
+                <p>📧 hello@omnifood.com</p>
+                <p>📞 +1 555-123-4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 OmniFood — All rights reserved. Eat smart, live better.</p>
+        </div>
+    </footer>
+
+    <!-- STEP 8: FIXED CHAT WIDGET (position: fixed) -->
     <div class="chat-widget">
-        <button class="chat-btn">
-            <span>💬</span>
-            <span class="chat-text">AI chat</span>
+        <button class="chat-btn" id="chatBtn">
+            💬 Chat with us
         </button>
     </div>
 
-    <!-- Simple JavaScript for mobile menu -->
     <script src="script.js"></script>
 </body>
 </html>

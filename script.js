@@ -1,23 +1,28 @@
-// Step 1: Get the button and menu elements from the page
-const menuButton = document.getElementById('menuBtn');
+const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
-// Step 2: Check if both elements exist (defensive but simple)
-if (menuButton && navLinks) {
-    
-    // Step 3: Add a click listener to the button
-    menuButton.addEventListener('click', function() {
-        
-        // Step 4: Toggle the 'show' class
-        navLinks.classList.toggle('show');
-        
-        // This is a small UX improvement I added
-        if (navLinks.classList.contains('show')) {
-            menuButton.textContent = '✕';  // Change to 'X' when open
-        } else {
-            menuButton.textContent = '☰';  // Change back to hamburger
-        }
-    });
-}
+// When someone clicks the hamburger button
+menuBtn.addEventListener('click', function() {
+    // Check if menu is already showing
+    if (navLinks.classList.contains('show')) {
+        // Hide the menu
+        navLinks.classList.remove('show');
+        // Change button back to hamburger icon
+        menuBtn.textContent = '☰';
+    } else {
+        // Show the menu
+        navLinks.classList.add('show');
+        // Change button to X icon
+        menuBtn.textContent = '✕';
+    }
+});
 
-/
+const chatBtn = document.getElementById('chatBtn');
+
+// When someone clicks the chat button
+chatBtn.addEventListener('click', function() {
+    // Simple alert to show the chat works
+    alert('🍲 Welcome to OmniFood chat! Our team will help you choose the perfect meal plan.');
+});
+
+// That's it! Simple and easy to understand.

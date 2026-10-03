@@ -377,7 +377,6 @@ footer {
     font-size: 12px;
 }
 
-/* ---------- FIXED CHAT WIDGET (Step 12) ---------- */
 .chat-widget {
     position: fixed;
     bottom: 20px;
@@ -402,10 +401,6 @@ footer {
     background: #cf711f;
 }
 
-/* ========================================
-   RESPONSIVE BREAKPOINTS
-   Mobile-first: media queries for larger screens
-======================================== */
 
 /* BREAKPOINT 1: 600px (tablets) */
 @media (min-width: 600px) {

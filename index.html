@@ -8,16 +8,12 @@
 </head>
 <body>
 
-    <!-- STEP 1: STICKY NAVIGATION BAR -->
+    <!-- STICKY NAVIGATION BAR -->
     <header class="sticky-nav">
         <div class="logo">
             <span>🍲</span> OmniFood
         </div>
-        
-        <!-- Mobile menu button (hamburger) -->
         <button class="mobile-menu-btn" id="menuBtn">☰</button>
-        
-        <!-- Navigation links -->
         <nav class="nav-links" id="navLinks">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -25,25 +21,24 @@
                 <li><a href="#cities">Cities</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#" class="signup-btn">Sign up</a></li>
+                <li><a href="#signup" class="signup-btn">Sign up</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- STEP 2: HERO SECTION -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
                 <h1>A healthy meal<br>delivered to your door,<br>every single day</h1>
                 <p>The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Start eating well</a>
-                    <a href="#" class="btn btn-outline">Learn more →</a>
+                    <a href="#signup" class="btn btn-primary">Start eating well</a>
+                    <a href="#how-it-works" class="btn btn-outline">Learn more →</a>
                 </div>
             </div>
             <div class="hero-image">
                 <img src="https://placehold.co/500x450/FFE6D5/e67e22?text=Healthy+Meal" alt="Healthy food plate">
-                <!-- ABSOLUTE positioned floating card -->
                 <div class="floating-badge">
                     ⭐ 500+ happy customers
                 </div>
@@ -51,7 +46,7 @@
         </div>
     </section>
 
-    <!-- STEP 3: HOW IT WORKS SECTION (4 steps) -->
+    <!-- HOW IT WORKS -->
     <section id="how-it-works">
         <div class="container">
             <h2 class="section-title">How it works — <span>simple as 1,2,3</span></h2>
@@ -80,7 +75,7 @@
         </div>
     </section>
 
-    <!-- STEP 4: CITIES SECTION (grid with images) -->
+    <!-- CITIES -->
     <section id="cities" class="bg-light">
         <div class="container">
             <h2 class="section-title">Our <span>cities</span> 🌍</h2>
@@ -117,7 +112,7 @@
         </div>
     </section>
 
-    <!-- STEP 5: TESTIMONIALS SECTION -->
+    <!-- TESTIMONIALS -->
     <section id="testimonials">
         <div class="container">
             <h2 class="section-title">Real <span>stories</span> from customers</h2>
@@ -142,7 +137,7 @@
         </div>
     </section>
 
-    <!-- STEP 6: PRICING SECTION -->
+    <!-- PRICING -->
     <section id="pricing" class="bg-warm">
         <div class="container">
             <h2 class="section-title">Start eating <span>well today</span></h2>
@@ -156,7 +151,7 @@
                         <li>✅ Free delivery</li>
                         <li>❌ Priority support</li>
                     </ul>
-                    <a href="#" class="btn btn-outline">Start starter</a>
+                    <button class="btn btn-outline plan-btn" data-plan="Starter" data-price="399">Subscribe</button>
                 </div>
                 <div class="pricing-card featured">
                     <h3>Complete 🥇</h3>
@@ -167,7 +162,7 @@
                         <li>✅ Free delivery + snacks</li>
                         <li>✅ Personalized recipes</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Get complete</a>
+                    <button class="btn btn-primary plan-btn" data-plan="Complete" data-price="649">Subscribe</button>
                 </div>
                 <div class="pricing-card">
                     <h3>Family Plan</h3>
@@ -178,13 +173,39 @@
                         <li>✅ Free delivery & dessert</li>
                         <li>✅ Nutritionist support</li>
                     </ul>
-                    <a href="#" class="btn btn-outline">Choose family</a>
+                    <button class="btn btn-outline plan-btn" data-plan="Family" data-price="899">Subscribe</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- STEP 7: FOOTER -->
+    <!-- ============ SIGNUP FORM ============ -->
+    <section id="signup" style="padding: 60px 20px; background: #ffffff; text-align: center;">
+        <h2 style="font-size: 2rem; color: #333; margin-bottom: 10px;">Get started today</h2>
+        <p style="color: #666; margin-bottom: 25px;">Sign up and start your healthy meal journey</p>
+        <form id="signup-form" style="display: flex; flex-direction: column; max-width: 420px; margin: 0 auto; gap: 12px;">
+            <input type="text"     name="name"     placeholder="Your name" required style="padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+            <input type="email"    name="email"    placeholder="Your email" required style="padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+            <input type="password" name="password" placeholder="Password" required style="padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+            <button type="submit" style="padding: 14px; background: #e67e22; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">Sign up now</button>
+        </form>
+        <p id="signup-msg" style="margin-top: 15px; font-weight: bold; color: #e67e22;"></p>
+    </section>
+
+    <!-- ============ CONTACT FORM ============ -->
+    <section id="contact" style="padding: 60px 20px; background: #f9f9f9; text-align: center;">
+        <h2 style="font-size: 2rem; color: #333; margin-bottom: 10px;">Contact us</h2>
+        <p style="color: #666; margin-bottom: 25px;">We'd love to hear from you</p>
+        <form id="contact-form" style="display: flex; flex-direction: column; max-width: 420px; margin: 0 auto; gap: 12px;">
+            <input type="text"  name="name"    placeholder="Your name" required style="padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+            <input type="email" name="email"   placeholder="Your email" required style="padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+            <textarea           name="message" placeholder="Your message" required style="padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; min-height: 120px; font-family: inherit;"></textarea>
+            <button type="submit" style="padding: 14px; background: #e67e22; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">Send message</button>
+        </form>
+        <p id="contact-msg" style="margin-top: 15px; font-weight: bold; color: #e67e22;"></p>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-logo">
@@ -208,13 +229,14 @@
         </div>
     </footer>
 
-    <!-- STEP 8: FIXED CHAT WIDGET (position: fixed) -->
+    <!-- CHAT WIDGET -->
     <div class="chat-widget">
-        <button class="chat-btn" id="chatBtn">
-            💬 Chat with us
-        </button>
+        <button class="chat-btn" id="chatBtn">💬 Chat with us</button>
     </div>
 
+    <!-- SCRIPTS -->
     <script src="script.js"></script>
+    <script src="config.js"></script>
+    <script src="api.js"></script>
 </body>
 </html>

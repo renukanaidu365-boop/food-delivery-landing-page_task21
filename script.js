@@ -18,11 +18,8 @@ menuBtn.addEventListener('click', function() {
 });
 
 const chatBtn = document.getElementById('chatBtn');
-
-// When someone clicks the chat button
 chatBtn.addEventListener('click', function() {
-    // Simple alert to show the chat works
+   
     alert('🍲 Welcome to OmniFood chat! Our team will help you choose the perfect meal plan.');
 });
 
-// That's it! Simple and easy to understand.
